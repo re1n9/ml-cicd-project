@@ -21,7 +21,7 @@ def test_health():
 def test_predict_setosa():
     response = client.post("/predict", json=SETOSA)
     assert response.status_code == 200
-    assert response.json() == {"predicted_class": "versicolor"}
+    assert response.json() == {"predicted_class": "setosa"}
 
 
 def test_missing_field_is_rejected():
